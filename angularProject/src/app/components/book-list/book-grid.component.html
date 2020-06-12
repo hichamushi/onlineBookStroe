@@ -2,12 +2,7 @@
     <div class="col-lg-3">
 
         <!-- <h1 class="my-4">Shop Name</h1> -->
-        <div class="list-group">
-            <a routerLink="/category/1" class="list-group-item fs" routerLinkActive="bg-info text-white font-weight-bold">Grand projet</a>
-            <a routerLink="/category/2" class="list-group-item fs" routerLinkActive="bg-info text-white font-weight-bold">Petit projet</a>
-            <a routerLink="/category/3" class="list-group-item fs" routerLinkActive="bg-info text-white font-weight-bold">Projet Public</a>
-            <a routerLink="/category/4" class="list-group-item fs" routerLinkActive="bg-info text-white font-weight-bold">Projet Privé</a>
-        </div>
+       <app-book-category></app-book-category>
 
     </div>
     <!-- /.col-lg-3 -->
@@ -31,6 +26,10 @@
                         <button class="btn btn-info">Plus de détails</button>
                       </div>
                     </div>
+                  </div>
+
+                  <div *ngIf="books?.length == 0" class="col-md-12 alert alert-warning mt-3">
+                    Aucun projet de ce nom
                   </div>
             
             </div>
